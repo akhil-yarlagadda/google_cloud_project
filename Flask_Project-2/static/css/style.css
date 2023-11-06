@@ -1,0 +1,97 @@
+body{
+	height:720px;
+	background-image: linear-gradient(to bottom right,pink,orange);
+}
+.logo{
+  position: absolute;
+  top: 30px;
+  right: 15px;
+}
+.heading{
+  text-align:center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size:3.5em;
+  letter-spacing: 3px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+.flash_message_display{
+top:18%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;	
+}
+.container{
+top:25%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+}
+.upload-box{
+	font-size:16px;
+	background:white;
+	border-radius:50px;
+	box-shadow:5px 5px 10px black;
+	width:350px;
+	outline:none;
+}	
+::-webkit-file-upload-button{
+	color:white;
+	background:#206a5d;
+	padding:20px;
+	border:none;
+	border-radius:50px;
+	box-shadow:1px 0 1px 1px #6b4559;
+	outline:none;
+}
+.button{
+top:35%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+font-family:"Roboto",sans-serif;
+font-size:16px;
+font-weight:bold;
+background:#C70039;
+width:120px;
+padding:20px;
+text-align:center;
+text-decoration:none;
+text-transform:uppercase;
+color:#fff;
+border-radius:5px;
+cursor:pointer;
+box-shadow: 5px 5px 10px black;
+}
+.photos_view{
+top:45%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+}
+.photos_text{
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+}
+.image_links{
+top:60%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+}

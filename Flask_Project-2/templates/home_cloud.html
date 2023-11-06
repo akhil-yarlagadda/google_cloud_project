@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>HOME</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <h1 class="heading">Welcome</h1>
+        <div class="logo">
+            <img src="/static/FAU-Logo.png" width="200" height="200" />
+        </div>
+        <div class="flash_message_display">
+            {% for message in get_flashed_messages() %}
+            <h4>{{ message }}</h4>
+            {% endfor %}
+        </div>
+        <form method="post" enctype="multipart/form-data" action="/upload" method="post">
+            <div class="container">
+                <input type="file" class="upload-box" name="form_file" accept="image/jpeg" />
+            </div>
+            <div>
+                <button class="button">Submit</button>
+            </div>
+        </form>
+        <div class="photos_view">
+            <hr width="1500px;" color="green" size="5" align="left" />
+        </div>
+        <div class="photos_text">
+            <h1>Your uploaded Photos</h1>
+        </div>
+        <div class="image_links">
+            {% for image in images %}
+            <li><a href="/image/{{image}}">{{image}}</a></li>
+            {% endfor %}
+        </div>
+    </body>
+</html>

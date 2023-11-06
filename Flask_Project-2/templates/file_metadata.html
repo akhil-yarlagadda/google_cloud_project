@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Image Details</title>
+      <style>
+         body{
+         justify-content:center;
+         align-items:center;
+         height:720px;
+		 background-image: linear-gradient(to bottom right,pink,orange);
+         }
+         .img_table_container{
+         display:flex;
+		 justify-content:center;
+         align-items:center;
+         }
+		 .image{
+		 display:inline-block;
+		 }
+         .img_display{
+         flex:1;
+         padding:20px;
+         }
+         .table{
+         flex:1;
+         padding:20px;
+         }
+         table{
+         width:100%;
+         border-collapse:collapse;
+         }
+         table,th,td{
+         border: 1px solid black;
+         }
+      </style>
+   </head>
+   <body>
+      {%if img_filename%}
+      <h2>
+         <center>{{img_filename}}</center>
+      </h2>
+      <div class="img_table_container">
+         <div class="img_display">
+            <img class="image" src="{{image_url}}" width="720px" height="600px">
+            {%endif%}	
+         </div>
+         <div class="table">
+            <table>
+               {% for k,v in dict_val.items()%}       	
+               <tr>
+                  <td>{{k}}</td>
+                  <td>{{v}}</td>
+               </tr>
+               {% endfor %}
+            </table>
+         </div>
+      </div>
+      <br>
+      <a href="/">back</a>
+   </body>
+</html>
